@@ -14,11 +14,13 @@ public class chapter6_4 {
             else {
                 int rt = stack.pop();
                 int lt = stack.pop();
-                if(x == '+') stack.push(lt+rt);
-                else if(x=='-') stack.push(lt-rt);
-                else if(x=='*') stack.push(lt*rt);
-                else if(x=='/') stack.push(lt/rt);
-
+                stack.push(switch(x) {
+                    case '+' -> lt+rt;
+                    case '-' -> lt-rt;
+                    case '*' -> lt*rt;
+                    case '/' -> lt/rt;
+                    default -> 0;
+                });
             }
         }
         int answer = stack.get(0);
