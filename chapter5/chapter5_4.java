@@ -1,3 +1,4 @@
+package chapter5;
 import java.util.*;
 
 public class chapter5_4 {
@@ -12,7 +13,7 @@ public class chapter5_4 {
         }
         int lt = 0;
         char[] str = a.toCharArray();
-        for(int i=0; i<b.length() -1; i++){
+        for(int i=0; i<b.length() -1; i++){ // 강의에서는 배열로 변환 안하고 그냥 charAt() 사용 
              map2.put(str[i], map2.getOrDefault(str[i], 0) +1);
         }
         
