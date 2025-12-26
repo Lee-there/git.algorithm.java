@@ -13,7 +13,7 @@ public class chapter7_3{
             }
             arr[j+1] = tmp;
         }
-        return arr;
+        return arr; 
     }
     public static void main(String[] args) {
         chapter7_3 T = new chapter7_3();
@@ -26,6 +26,7 @@ public class chapter7_3{
         }
         for(int x : T.solution(a,arr)){
             System.out.print(x + " ");
+            in.close();
         }
     }
 
