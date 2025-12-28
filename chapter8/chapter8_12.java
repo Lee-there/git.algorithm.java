@@ -2,7 +2,8 @@ package chapter8;
 import java.util.*;
 
 public class chapter8_12 {
-    /* 경로탐색(DFS) */
+    /* 경로탐색(DFS) 
+        정점을 행렬을 통해 표현하는 버전*/
     static int n, m, answer = 0;
     static int[][] graph;
     static int[] ch;
@@ -15,7 +16,6 @@ public class chapter8_12 {
                     DFS(i);
                     ch[i] = 0;
                 }
-
             }
         }
 
