@@ -16,7 +16,7 @@ public class chapter8_7 {
         이 자료구조를 통해 최단거리 구할 수 있음 (레벨이 제일 낮은 곳에 있는 놈이 아마 최단거리가 되지 않을까 예상)
      */
    Node root;
-   public void BFS(Node root){
+    void BFS(Node root){
     Queue<Node> Q = new LinkedList<>();
     Q.offer(root);
     int L = 0;
