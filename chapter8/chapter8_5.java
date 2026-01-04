@@ -4,14 +4,7 @@ package chapter8;
         1.전위순회: 부모 -> 왼쪽 자식 -> 오른쪽 자식
         2.중위순회: 왼쪽 자식 -> 부모 -> 오른쪽 자식
         3.후위순회: 왼쪽 자식 -> 오른쪽 자식 -> 부모   */
-class Node{
-        int data;
-        Node lt, rt;
-        public Node(int val){
-            data = val;
-            lt = rt = null;
-        }
-    }
+
 
 public class chapter8_5 {
     /*밑의 1번 코드 2번 코드 3번 코드를 어디에 하냐에 따라 전위 중위 후위 순회로 구분된다
@@ -19,6 +12,7 @@ public class chapter8_5 {
         중위: 2->1->3
         후위: 2->3->1                                                            */
     Node root;
+    @SuppressWarnings("UnnecessaryReturnStatement")
     public void DFS(Node root){
         if(root == null) return;
         else{ 
