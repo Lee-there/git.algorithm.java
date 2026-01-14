@@ -1,17 +1,12 @@
-package Beakjoon;
+
 import java.util.*;
 
 class DFS1260{
     static int n , m , s;
-    static int[][] arr;
     static int[] ch;
-    public void DFS(int L){
-        if(L == n){
-            
-        }else{
-            
-            
-        }
+    static ArrayList<ArrayList<Integer>> graph;
+    public void DFS(int v){ // 순서 문제가 이니므로 초기값을 L이 아닌 현 위치 v로 설정한다
+        
     }
     public void BFS(){
         Queue<Integer> Q = new LinkedList<>();
@@ -27,12 +22,15 @@ class DFS1260{
         n = in.nextInt();
         m = in.nextInt();
         s = in.nextInt();
-        arr = new int[n][n];
+        graph = new ArrayList<>();
+        for(int i=0; i<=n; i++){
+            graph.add(new ArrayList<>());
+        }
         for(int i = 0; i< m; i++){
             int p = in.nextInt();
             int q = in.nextInt();
-            arr[p][q] = 1;
-            arr[q][p] = 1;
+            graph.get(p).add(q);
+            graph.get(q).add(p);
         }
         ch = new int[n+1];
         ch[s] = 1;

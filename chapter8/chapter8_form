@@ -75,4 +75,3 @@ public void DFS(int v) {
 
 "모든 경우를 다 해봐야 한다" 혹은 **"특정 경로를 찾아라"**면? DFS가 유리합니다.
 
-아까 공부하신 ArrayList<ArrayList<Integer>> 구조는 BFS, DFS 둘 다에서 이웃 노드를 찾는 for문 안에 똑같이 들어갑니다.

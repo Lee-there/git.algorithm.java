@@ -10,7 +10,7 @@ public class chapter8_8 {
     4. 움직일 때 변수를 바꾸는 방법보다 배열에서 변수가 이동한 위치를 인덱스로 해서
        그 인덱스의 값을 1로 바꾸는 방법 많이 사용하는듯 */
     
-    int[] dis = {-1 , 1, 5};
+    int[] dis = {-1 , 1, 5}; //여러 이동 거리 조건이 존재할 경우 이렇게 배열로 만든 후 for문으로 
     int[] ch;
     Queue<Integer> Q = new LinkedList<>();
     public int BFS(int s, int e){

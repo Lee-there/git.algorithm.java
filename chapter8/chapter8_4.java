@@ -13,7 +13,7 @@ public class chapter8_4 {
 
     @SuppressWarnings("all")
     public int DFS(int n){
-        if(fibo[n]>0) return fibo[n];  
+        if(fibo[n]>0) return fibo[n];  //배열이 초기에 0으로 설정됐으니까 0보다 크면 이미 나온 수
         if(n==1) return fibo[n] = 1;
         else if (n==2) return fibo[n] = 1;
         else return fibo[n] =  DFS(n-1) + DFS(n-2);
