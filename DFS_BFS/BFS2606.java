@@ -1,6 +1,6 @@
 import java.util.*;
 
-class DFS2606{
+class BFS2606{
     static int n,m;
     static int answer = 0;
     static int[][] arr;
@@ -24,7 +24,7 @@ class DFS2606{
     }
     @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
-        DFS2606 T = new DFS2606();
+        BFS2606 T = new BFS2606();
         Scanner in = new Scanner(System.in);
         n = in.nextInt(); // 정점
         m = in.nextInt(); // 간선
