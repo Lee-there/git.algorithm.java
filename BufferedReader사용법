@@ -1,0 +1,58 @@
+BufferedReader를 쓸 때는 보통 StringTokenizer라는 친구와 세트로 다님
+import java.io.*; // 입출력을 위해 반드시 필요
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException { // 예외처리 필수
+        // 1. 선언
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // 2. 한 줄 읽기
+        String line = br.readLine(); 
+
+        // 3. 공백 단위로 쪼개기 (예: "10 20" -> "10", "20")
+        StringTokenizer st = new StringTokenizer(line);
+        int n = Integer.parseInt(st.nextToken()); // "10"을 숫자로 변환
+        int m = Integer.parseInt(st.nextToken()); // "20"을 숫자로 변환
+    }
+}
+
+
+***String형으로 받은 입력값을 순조롭게 내가 필요한 자료형으로 바꾸는 방법***
+1. 공백으로 구분된 숫자 읽기 (가장 흔한 케이스)
+String line = br.readLine(); // "10 20 30" 한 줄 읽기
+StringTokenizer st = new StringTokenizer(line); // 공백 단위로 쪼개기 도구
+// 뽑아서 숫자로 변환
+int a = Integer.parseInt(st.nextToken()); // 10
+int b = Integer.parseInt(st.nextToken()); // 20
+int c = Integer.parseInt(st.nextToken()); // 30
+
+2. 공백 없이 붙어있는 숫자 읽기 (지형/미로 문제)
+String line = br.readLine(); // "0110" 한 줄 읽기
+for (int i = 0; i < n; i++) {
+    // charAt(i)는 글자 '0'을 가져오므로, '0'을 빼야 숫자 0이 됩니다.
+    board[x][i] = line.charAt(i) - '0'; 
+}
+
+3. 공백 없이 붙어있는 문자 읽기 
+// 가장 쉬운 방법: String을 한꺼번에 char[]로 변환
+board[x] = br.readLine().toCharArray();
+
+4. 자주 쓰는 변환 메서드 요약표
+1. String(문자열) -> int(정수)
+   int n = Integer.parseInt(str);
+
+2. String(문자열) -> long(큰 정수)
+   long l = Long.parseLong(str);
+
+3. String(문자열) -> char[](문자 배열)
+   char[] arr = str.toCharArray();
+
+4. char(문자) -> int(정수)
+   int n = c - '0';  // 예: '5' - '0' = 5
+
+5. String(문자열)에서 특정 위치 문자 가져오기
+   char c = str.charAt(index);
+
+6. int(정수) -> String(문자열)
+   String s = String.valueOf(n);
