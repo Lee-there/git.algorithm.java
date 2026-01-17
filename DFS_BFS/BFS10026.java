@@ -96,12 +96,20 @@ public class BFS10026 {
         in.close();
     }
 }
-/* Gemini가 짜준 개선된 코드 보면서 복습하기
+/* 복습할거
+복습1. Arrays.fill(ch[i],0); 사용법 숙지 (이차원 배열 같은 경우 for문을 통해 한 줄씩 fill해야됨)
+복습2. 배열 복사하는 clone()은 2차원 배열 복사할 때 그냥 사용할 시 위험함
+       -> 꼭 for문을 통해 각각 한 low씩 따로 복사 또는 System.arraycopy 사용하자
+       ->2차원 배열 복사 시 2차원 배열은 배열을 담고 있는 배열이므로 배열의 주소값이 저장되는 사고 발생
+       ->System.arraycopy 사용법
+         System.arraycopy(원본배열, 원본시작위치, 복사본배열, 복사본시작위치, 복사할개수);
+
+Gemini가 짜준 개선된 코드 보면서 복습하기
 개선1. 밑 코드는 board함수로 먼저 일반인 기준 출력 후 board를 색맹용으로 바꿔주어 다시 출력(BFS단일화)
 개선2. board[i] = in.next().toCharArray(); 을 통한 입력받을 때 효율성 증가
 팁1. 밑 코드는 가독성을 위해 x*n+y사용하는 대신 int[] {x,y}사용함 (내 코드가 속도 면에서는 더 좋음)
-import java.util.*;
 
+import java.util.*;
 public class BFS10026_Improved {
     static char[][] board;
     static int[][] ch;
