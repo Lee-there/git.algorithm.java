@@ -3,7 +3,8 @@ import java.util.*;
  
 /*
 복습1. 그림 그려보면서 알고리즘 진행 과정 확인 필수
-복습2. 알고리즘 아이디어 확인 밑 Edge 클래스 사용, 오버라이드 사용 복습 */
+복습2. 알고리즘 아이디어 확인 밑 Edge 클래스 사용, 오버라이드 사용 복습
+복습3. continue를 통한 필요 없는 계산 줄이기 확인 */
 class Edge implements Comparable<Edge>{
     public int vex; //정점
     public int cost; //비용
@@ -39,6 +40,7 @@ public void solution(int v){
         }
     }
 }
+@SuppressWarnings("ConvertToTryWithResources")
 public static void main(String[] args) {
     chapter10_5 T = new chapter10_5();
     Scanner in = new Scanner(System.in);
@@ -61,5 +63,6 @@ public static void main(String[] args) {
         if(dis[i] != Integer.MAX_VALUE) System.out.println(i+" : " + dis[i]);
         else System.out.println(i+ " : impossible");
     }
+    in.close();
 } 
 }
