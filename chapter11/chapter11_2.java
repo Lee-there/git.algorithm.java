@@ -11,12 +11,14 @@ public class chapter11_2 {
         }
         return dy[n] + dy[n-1];
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         chapter11_2 T = new chapter11_2();
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         dy = new int[n+1];
         System.out.println(T.solution(n));
+        in.close();
     }
 }
 

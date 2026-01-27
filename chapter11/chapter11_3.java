@@ -19,6 +19,7 @@ public class chapter11_3 {
         for(int i=0; i<n; i++) answer = Math.max(answer, dy[i]);
         System.out.println(answer);
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         chapter11_3 T = new chapter11_3();
         Scanner in = new Scanner(System.in);
@@ -29,6 +30,7 @@ public class chapter11_3 {
             arr[i] = in.nextInt();
         }
         T.solution(arr, n);
+        in.close();
     }
 }
 /* 
