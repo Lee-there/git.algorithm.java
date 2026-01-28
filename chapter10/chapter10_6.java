@@ -15,6 +15,7 @@ public class chapter10_6 {
         int fb = Find(b);
         if(fa!=fb) unf[fa] = fb;
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();

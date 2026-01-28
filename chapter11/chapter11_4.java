@@ -34,6 +34,7 @@ public class chapter11_4 {
         }
         System.out.println(answer);
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         chapter11_4 T = new chapter11_4();
         Scanner in = new Scanner(System.in);
@@ -48,6 +49,7 @@ public class chapter11_4 {
         }
         Collections.sort(arr);
         T.solution();
+        in.close();
     }
 }
 /* 혼자 아이디어 생각나서 풀었다 개꿀
